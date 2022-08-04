@@ -21,7 +21,7 @@ run in `C:/.../root/generator_files/create_file_structure.py`, it will create th
 Happy Holidays!
 
 Possible features to implement:
-1. Pulling and updating input.txt directly from site.
+1. Pulling and updating input.txt directly from site.  
   -Populating docstrings with the problem from site as well.
 2. Support for other languages. (use regex matching and supported filetypes)
 3. Fancier readme
