@@ -11,11 +11,11 @@ Setup:
 
 1. Download.
 2. Edit templates to your specs.
-3. Run create_file_structure.py and input your desired years to generate
+3. Run `create_file_structure.py` and input your desired years to generate
 
 #### Important!
 
-create_file_structures.py creates the file tree in the *directory above the one it's in*, so if  
+`create_file_structures.`py` creates the file tree in the *directory above the one it's in*, so if  
 run in `C:/.../root/generator_files/create_file_structure.py`, it will create the tree in `C:/.../root/`  
 
 Happy Holidays!

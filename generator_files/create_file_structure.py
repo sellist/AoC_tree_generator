@@ -80,8 +80,8 @@ def create_structure(start, end):
         for dir2 in common_dir:
             try:
                 os.makedirs(os.path.join(dir1, dir2))
-                shutil.copy('utils/solution_template.py', f"{dir1}/{dir2}/solution.py")
-                shutil.copy('utils/testing_template.py', f"{dir1}/{dir2}/tests.py")
+                shutil.copy('generator_files/solution_template.py', f"{dir1}/{dir2}/solution.py")
+                shutil.copy('generator_files/testing_template.py', f"{dir1}/{dir2}/tests.py")
                 with open(f'{dir1}/{dir2}/input.txt', 'w') as f:
                     f.write('')
             except OSError:
