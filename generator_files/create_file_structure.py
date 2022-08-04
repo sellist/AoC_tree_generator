@@ -60,10 +60,8 @@ def input_years():
 
 def create_structure(start, end):
     """
-    Creates file tree of every Advent of Code day and year, from first year (2015) up to the current
-    year in the directory ABOVE this one. Adds a quick and rough testing file to build pytests with, a solution file to
-    go with the tests (can also be run on its own, without tests), and an empty input.txt file to copy AoC's
-    file into. Comment out line 37 to create tree in current directory.
+    Creates file tree of every Advent of Code day and year, from args.
+    :args: start, end: start year and end year to generate
     :return: None
     """
     main_dir = [f"advent_of_code_{x}" for x in range(start, end + 1)]
