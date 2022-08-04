@@ -2,6 +2,7 @@ import os
 import shutil
 from datetime import date
 import time
+import sys
 
 """
 Example structure:
@@ -68,13 +69,8 @@ def create_structure(start, end):
     main_dir = [f"advent_of_code_{x}" for x in range(start, end + 1)]
     common_dir = [f"day_{x:02d}" for x in range(1, 26)]
 
-    # makes it so script can be run from utils folder and populate main dir, comment out to do in current dir
-    os.chdir('/')
-
-    try:
-        os.makedirs(os.getcwd())
-    except OSError:
-        pass
+    os.chdir(sys.path[0])
+    os.chdir('..')
 
     for dir1 in main_dir:
         for dir2 in common_dir:
@@ -84,8 +80,9 @@ def create_structure(start, end):
                 shutil.copy('generator_files/testing_template.py', f"{dir1}/{dir2}/tests.py")
                 with open(f'{dir1}/{dir2}/input.txt', 'w') as f:
                     f.write('')
-            except OSError:
+            except OSError as e:
                 print(f"Passing over {dir1}/{dir2} as path is currently occupied.")
+                print(e)
                 continue
         with open(f'{dir1}/readme.md', 'w') as f:
             f.write('Placeholder readme! Please change me!')
