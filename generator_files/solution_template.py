@@ -27,7 +27,7 @@ class Part2:
 
 
 with open("input.txt", "r") as file:
-    f = file.read().splitlines()
+    f = file.readlines()
 
 print(f"Part 1: {Part1.solution(f)}")
 print(f"Part 2: {Part2.solution(f)}")
